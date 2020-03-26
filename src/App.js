@@ -22,7 +22,8 @@ class App extends Component {
 		this.state = {
 			webcamEnabled: false,
 			facingMode: "user",
-			imageData: null
+			imageData: null,
+			mirrored: "true"
 		};
 	}
 
@@ -48,10 +49,12 @@ class App extends Component {
 					        ref={this.setRef}
 					        screenshotFormat="image/jpeg"
 					        width={1280}
-									mirrored="true"
+									mirrored={this.state.mirrored}
 									videoConstraints={videoConstraints}
 								 />
-								 <button className="has-text-centered button is-small is-rounded is-warning" type="button"onClick={()=> this.state.facingMode === "user" ? this.setState({ facingMode: "environment"}) : this.setState({facingMode: "user"})}>
+								 <button className="has-text-centered button is-small is-rounded is-warning" type="button"onClick={()=> this.state.facingMode === "user" ?
+								 this.setState({ facingMode: "environment", mirrored: "false"})
+								 : this.setState({facingMode: "user", mirrored: "true"})}>
 	 	 						Switch camera
 	 	 						</button>
 								<br />
@@ -74,7 +77,7 @@ class App extends Component {
 						)}
 					</div>
 				</div>
-				<footer className="hero-foot" style={{position: "relative", top: '70vh'}}>
+				<footer className="hero-foot" style={{position: "relative", top: '60vh'}}>
 				 <div className="content has-text-centered" style={{color: "white"}}>
 					Made with <i className="fa fa-heart" style={{color: "rgb(235, 43, 86)"}}></i> & <i className="fa fa-coffee" style={{color: "grey"}}></i> in Orlando
 				 <div className=" content has-text-centered">

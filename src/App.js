@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Webcam from 'react-webcam';
-import './App.css';
 import ScrollIntoView from 'react-scroll-into-view';
 
 class App extends Component {

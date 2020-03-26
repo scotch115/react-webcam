@@ -74,6 +74,16 @@ class App extends Component {
 						)}
 					</div>
 				</div>
+				<footer className="hero-foot" style={{position: "relative", top: '70vh'}}>
+				 <div className="content has-text-centered" style={{color: "white"}}>
+					Made with <i className="fa fa-heart" style={{color: "rgb(235, 43, 86)"}}></i> & <i className="fa fa-coffee" style={{color: "grey"}}></i> in Orlando
+				 <div className=" content has-text-centered">
+					 <a href="https://bulma.io">
+					 <img src="https://bulma.io/images/made-with-bulma--white.png" alt="Made with Bulma" width="128" height="24" />
+					 </a>
+				 </div>
+				 </div>
+				</footer>
 	    </div>
 	  );
 	}
